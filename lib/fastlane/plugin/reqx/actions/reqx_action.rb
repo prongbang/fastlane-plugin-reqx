@@ -1,4 +1,7 @@
 require 'fastlane/action'
+require 'net/http'
+require 'uri'
+require 'json'
 require_relative '../helper/reqx_helper'
 
 module Fastlane
