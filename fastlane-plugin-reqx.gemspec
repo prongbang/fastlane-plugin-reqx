@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fastlane/plugin/reqx/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'reqx'
+  spec.name          = 'fastlane-plugin-reqx'
   spec.version       = Fastlane::Reqx::VERSION
   spec.author        = 'prongbang'
   spec.email         = ''
