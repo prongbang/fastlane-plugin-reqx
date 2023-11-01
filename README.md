@@ -7,7 +7,7 @@
 This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. To get started with `fastlane-plugin-reqx`, add it to your project by running:
 
 ```bash
-gem "fastlane-plugin-[plugin_name]", git: "https://github.com/prongbang/fastlane-plugin-reqx"
+gem "fastlane-plugin-reqx", git: "https://github.com/prongbang/fastlane-plugin-reqx"
 ```
 
 ## About reqx
