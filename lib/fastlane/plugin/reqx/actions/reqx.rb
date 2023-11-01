@@ -47,7 +47,7 @@ module Fastlane
       def self.handle_response(res)
         case res
         when Net::HTTPSuccess
-          UI.message("#{res.body}")
+          UI.message(res.body.to_s)
           return res.body
         when Net::HTTPRedirection
           UI.important("Redirection detected. Response: #{res.body}")
@@ -77,34 +77,34 @@ module Fastlane
       def self.available_options
         [
           FastlaneCore::ConfigItem.new(
-           key: :url,
-           env_name: "REQX_URL",
-           description: "URL to send the request to",
-           verify_block: proc do |value|
-             UI.user_error!("URL is required") if value.to_s.empty?
-           end
+            key: :url,
+            env_name: "REQX_URL",
+            description: "URL to send the request to",
+            verify_block: proc do |value|
+              UI.user_error!("URL is required") if value.to_s.empty?
+            end
           ),
           FastlaneCore::ConfigItem.new(
-           key: :method,
-           env_name: "REQX_METHOD",
-           description: "Method to send the request",
-           verify_block: proc do |value|
-             UI.user_error!("Method is required") if value.to_s.empty?
-           end
+            key: :method,
+            env_name: "REQX_METHOD",
+            description: "Method to send the request",
+            verify_block: proc do |value|
+              UI.user_error!("Method is required") if value.to_s.empty?
+            end
           ),
           FastlaneCore::ConfigItem.new(
-           key: :header,
-           env_name: "REQX_HEADER",
-           description: "Header of the request",
-           default_value: {},
-           is_string: false
+            key: :header,
+            env_name: "REQX_HEADER",
+            description: "Header of the request",
+            default_value: {},
+            is_string: false
           ),
           FastlaneCore::ConfigItem.new(
-           key: :body,
-           env_name: "REQX_BODY",
-           description: "Body of the request",
-           default_value: {},
-           is_string: false
+            key: :body,
+            env_name: "REQX_BODY",
+            description: "Body of the request",
+            default_value: {},
+            is_string: false
           )
         ]
       end
