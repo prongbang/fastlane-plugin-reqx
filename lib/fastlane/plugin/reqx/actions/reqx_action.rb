@@ -84,7 +84,7 @@ module Fastlane
           FastlaneCore::ConfigItem.new(
            key: :method,
            env_name: "REQX_METHOD",
-           description: "Method to send the request to",
+           description: "Method to send the request",
            verify_block: proc do |value|
              UI.user_error!("Method is required") if value.to_s.empty?
            end

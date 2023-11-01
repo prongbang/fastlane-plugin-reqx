@@ -1,3 +1,13 @@
 lane :test do
-  reqx
+  body = reqx(
+    method: "POST",
+    url: "https://httpbin.org/post",
+    header: { 'Api-Key': '1234' },
+    body: { key1: 'value1', key2: 'value2' }
+  )
+  unless body.nil?
+    parsed_body = JSON.parse(body)
+    json_data = parsed_body['json']
+    UI.message("Json: #{json_data}")
+  end
 end
