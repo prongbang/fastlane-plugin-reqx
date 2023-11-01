@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ''
 
   spec.summary       = 'HTTP Client for Fastlane'
-  spec.homepage      = "https://github.com/prongbang/reqx"
+  spec.homepage      = "https://github.com/prongbang/fastlane-plugin-reqx"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
